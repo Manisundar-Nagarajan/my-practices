@@ -1,0 +1,12 @@
+/*To convert the given character, if it is upper case, convert it to the lower case. If it is lower case, convert it to the upper case*/
+#include<stdio.h>
+int main()
+{
+char ch;
+printf("Enter the character: ");
+scanf("%c", &ch);
+if(ch>=65 && ch<=90)
+printf("The reversal limit of the given character %c is: %d+32=%c\n", ch, ch+32);
+if(ch>=97 && ch<=122)
+printf("The reversal limit of the given character %c is: %d-32=%c\n", ch, ch-32);
+}
