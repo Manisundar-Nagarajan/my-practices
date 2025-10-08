@@ -1,0 +1,17 @@
+/*Sum of digits of a given number*/
+#include<stdio.h>
+int main()
+{
+int digit, num, sum=o, value;
+printf("Enter the value: ");
+scanf("%d", &num),
+value=num;
+while(num!=0)
+{
+digit=num%10;
+sum=sum+digit;
+num=num/10;
+}
+printf("The sum of the given digits %d is: %d\n", value, sum);
+return o;
+}
