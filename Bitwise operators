@@ -1,4 +1,4 @@
-// To clear the particular bit of a number//
+// To compliment the particular bit of a number//
 #include<stdio.h>
 int main()
 {
@@ -8,11 +8,7 @@ int main()
         printf("Enter the position: ");
         scanf("%d", &pos);
         x=num>>pos&1;
-        if(x!=0)
-        {
-                num=num^(1<<pos);
-                printf("%d\n", num);
-        }
-        else
-                printf("%d\n", num);
+        num=num^(1<<pos);
+        printf("%d\n", num);
 }
+
