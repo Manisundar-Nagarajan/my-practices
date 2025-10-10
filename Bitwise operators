@@ -1,14 +1,16 @@
-// To check whether the gven number is power of 2 or not//
+// To check the no. of 1s in a given binary number//
 #include<stdio.h>
 int main()
 {
-        int num;
-        printf("Enter the number: ");
+        int num, count=0;
+        printf("Enter the value: ");
         scanf("%d", &num);
-        if((num&(num-1))==0)
-                printf("Given number is a power of 2\n");
-        else
-        printf("Its not a power of 2\n");
+        while(num)
+        {
+                count+=(num&1);
+                num>>=1;
+        }
+        printf("%d\n", count);
 }
 
 
