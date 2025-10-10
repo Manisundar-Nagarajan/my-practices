@@ -1,24 +1,20 @@
-// To swap the particular bits of a number//
+// To reverse the entire binary number//
 #include<stdio.h>
 int main()
 {
-        int x, y, num, pos1, pos2;
-        printf("Enter the value: ");
-        scanf("%d", &num);
-        printf("Position1 is: ");
-        scanf("%d", &pos1);
-        printf("Position2 is: ");
-        scanf("%d", &pos2);
-        x=num>>pos1&1;
-        y=num>>pos2&1;
-        if(x==y)
-                return num;
-        else
-        {
-                num=num^(1<<pos1);
-                num=num^(1<<pos2);
-                printf("%d", num);
-        }
+        int p1=0, p2=31, x, y, num;
+        for(;p2>p1;p1++)
+                {
+                        x=num>>p1&1;
+                        y=num>>p2&1;
+                        if(x!=y)
+                        {
+                                num=num^(1<<p1);
+                                num=num^(1<<p2);
+                        }
+                        p2--;
+                }
+        printf("%d", num);
 }
 
 
