@@ -1,4 +1,4 @@
-// To set the perticular bit of a numer//
+// To set the particular bit of a number//
 #include<stdio.h>
 int main()
 {
