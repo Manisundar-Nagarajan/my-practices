@@ -1,13 +1,18 @@
-// To set the particular bit of a number//
+// To clear the particular bit of a number//
 #include<stdio.h>
 int main()
 {
-        int num, pos,x;
-        printf("Enter the number: ");
+        int num, pos, x;
+        printf("Enter the value: ");
         scanf("%d", &num);
         printf("Enter the position: ");
         scanf("%d", &pos);
-        x=1<<pos;
-        printf("%d\n", (num|x));
+        x=num>>pos&1;
+        if(x!=0)
+        {
+                num=num^(1<<pos);
+                printf("%d\n", num);
+        }
+        else
+                printf("%d\n", num);
 }
-
