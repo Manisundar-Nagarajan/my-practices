@@ -1,0 +1,14 @@
+// To check the given number is set or clear//
+#include<stdio.h>
+int main()
+{
+int num, pos;
+printf("Enter the value: ");
+scanf("%d", &num);
+printf("Enter the position: ");
+scanf("%d", &pos);
+if(((num>>pos)&1)==1)
+printf("The given number is a set\n");
+else
+printf("The given number is a clear\n");
+}
