@@ -1,0 +1,26 @@
+// To display the strong number of given range (1 to 200)
+        scanf("%d %d", &n, &m);
+        while(n<=m)
+        {
+                k=n;
+                rem=0;
+                while(k!=0)
+                {
+                sum=1;
+                rev=k%10;
+                while(rev!=0)
+                {
+                sum=sum*rev;
+                rev--;
+                }
+                rem+=sum;
+                k=k/10;
+                }
+                if(n==rem)
+                printf("%d  ", n);
+                n++;
+        }
+        printf("\n");
+        return 0;
+}
+
