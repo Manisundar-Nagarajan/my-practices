@@ -1,26 +1,25 @@
 // To check the given number is an armstrong number or not
-#include<stdio.h>
+#include<math.h>
 int main()
 {
-        int n, sum, m, rev, rem=0;
-        printf("Enter the value: ");
-        scanf("%d", &n);
-        m=n;
+        int num, k, m, count=0, y, result=0;
+        printf("Enter the number: ");
+        scanf("%d", &num);
+        m=num;
         while(m!=0)
         {
-                sum=1;
-                rev=m%10;
-                while(rev!=0)
-                {
-                sum=sum*rev;
-                rev--;
-                }
-                rem+=sum;
+                m=m/10;
+                count++;
+        }
+        m=num;
+        while(m!=0)
+        {
+                k=m%10;
+                result+=pow(k,count);
                 m=m/10;
         }
-        if(n==rem)
-                printf("The given number %d is a strong number\n", n);
+        if(result==num)
+                printf("The given number %d is an armstrong number\n", result);
         else
-                printf("Its not a strong number\n");
-        return 0;
+                printf("The given number %d is not an armstrong number\n", result);
 }
