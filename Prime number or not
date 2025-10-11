@@ -1,9 +1,9 @@
-//TO DISPLAY 1 TO 100 PRIME NUMBERS WHICH WERE ENDING WITH 3
+//TO DISPLAY TWIN PRIME NUMBERS FROM 1 TO 100
 #include<stdio.h>
 int main()
 {
-        int num, i;
-        for(num=1;num<=100;num++)
+        int num, count=0, i;
+        for(num=1;count<100;num++)
         {
                 for(i=2;i<=num/2;i++)
                 {
@@ -13,8 +13,10 @@ int main()
                 if((i==(num/2)+1)&&(num%10==3))
                 {
                         printf("%d  ", num);
+                        count++;
                 }
         }
         return 0;
 }
+
 
