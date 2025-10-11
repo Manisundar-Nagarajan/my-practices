@@ -1,25 +1,21 @@
-// To display palindrome in given range
+// To check the given number is palindrome or not
 #include<stdio.h>
 int main()
 {
-        int rem, rev, n, m, temp;
-        printf("Enter the values: ");
-        scanf("%d %d", &n, &m);
-        while(n<=m)
+        int rem=0, rev, n, m;
+        printf("Enter the value: ");
+        scanf("%d", &n);
+        m=n;
+        while(n!=0)
         {
-                temp=n;
-                rem=0;
-        while(temp!=0)
-        {
-                rev=temp%10;
+                rev=n%10;
                 rem=rem*10+rev;
-                temp=temp/10;
+                n=n/10;
         }
-        if(n==rem)
-        {
-                printf("%d  ", rem);
-        }
-        n++;
-        }
+        if(m==rem)
+                printf("The given number is a palindrome\n");
+        else
+                printf("The given number is not a palindrome\n");
         return 0;
         }
+
