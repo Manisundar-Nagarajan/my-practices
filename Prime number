@@ -1,9 +1,9 @@
-//To display twin prime numbers from 1 to 100 
+//To display 50th prime number 
 #include<stdio.h>
 int main()
 {
-        int num, i, prev=1;
-        for(num=1;num<=100;num++)
+        int num, count=0, i;
+        for(num=1;count<100;num++)
         {
                 for(i=2;i<=num/2;i++)
                 {
@@ -12,15 +12,18 @@ int main()
                 }
                 if(i==(num/2)+1)
                 {
-                        if(prev+2==num)
-                        {
-                        printf("(%d,%d)  ", prev, num);
-                        }
-                        prev=num;
+                count++;
+                }
+                if(count==50)
+                {
+                        printf(" The 50th prime number is: %d\n", num);
+                break;
                 }
         }
         return 0;
 }
+
+
 
 
 
