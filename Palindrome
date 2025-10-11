@@ -1,0 +1,25 @@
+// To display palindrome in given range
+#include<stdio.h>
+int main()
+{
+        int rem, rev, n, m, temp;
+        printf("Enter the values: ");
+        scanf("%d %d", &n, &m);
+        while(n<=m)
+        {
+                temp=n;
+                rem=0;
+        while(temp!=0)
+        {
+                rev=temp%10;
+                rem=rem*10+rev;
+                temp=temp/10;
+        }
+        if(n==rem)
+        {
+                printf("%d  ", rem);
+        }
+        n++;
+        }
+        return 0;
+        }
