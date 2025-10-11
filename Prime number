@@ -1,9 +1,9 @@
-//To display 1 to 100 prime numbers which were ending with 3
+//To display first 100 prime numbers which were ending with 3
 #include<stdio.h>
 int main()
 {
-        int num, i;
-        for(num=1;num<=100;num++)
+        int num, count=0, i;
+        for(num=1;count<100;num++)
         {
                 for(i=2;i<=num/2;i++)
                 {
@@ -13,6 +13,7 @@ int main()
                 if((i==(num/2)+1)&&(num%10==3))
                 {
                         printf("%d  ", num);
+                        count++;
                 }
         }
         return 0;
