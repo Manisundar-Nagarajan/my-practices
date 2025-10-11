@@ -1,22 +1,27 @@
-//To display first 100 prime numbers which were ending with 3
+//To display twin prime numbers from 1 to 100 
 #include<stdio.h>
 int main()
 {
-        int num, count=0, i;
-        for(num=1;count<100;num++)
+        int num, i, prev=1;
+        for(num=1;num<=100;num++)
         {
                 for(i=2;i<=num/2;i++)
                 {
                         if(num%i==0)
                                 break;
                 }
-                if((i==(num/2)+1)&&(num%10==3))
+                if(i==(num/2)+1)
                 {
-                        printf("%d  ", num);
-                        count++;
+                        if(prev+2==num)
+                        {
+                        printf("(%d,%d)  ", prev, num);
+                        }
+                        prev=num;
                 }
         }
         return 0;
 }
+
+
 
 
