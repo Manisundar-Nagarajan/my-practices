@@ -1,17 +1,19 @@
-// To display the multiplication table of a given number
+// To display the multiplication table of two given number
 #include<stdio.h>
 int main()
 {
-        int x=1, n;
-        printf(" the Multiplication table for: ");
-        if(scanf("%d", &n) !=1)
+        int x=1, n, m;
+        printf(" The Multiplication table for:\n");
+        if(scanf("%d %d", &n, &m) !=2)
         {
-                printf("The given number is not an integer");
-        return 1;
+                printf(" The given number is not an integer\n");
+                return 1;
         }
         mlt:
-        printf("%d*%d=%d\n", x, n, x*n);
+        printf("%d*%d=%d\t", x, n, x*n);
+        printf("%d*%d=%d\n", x, m, x*m);
         x++;
         if(x<=10)
         goto mlt;
+        return 0;
 }
