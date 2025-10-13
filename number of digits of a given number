@@ -1,14 +1,14 @@
-// To display the number of digits of a given number
+// To display the sum of number of digits of a given number
 #include<stdio.h>
 int main()
 {
-        int count=0, n;
+        int rem=0, n;
         printf(" Enter the value: ");
         scanf("%d", &n);
         while(n>0)
         {
+                rem+=n%10;
                 n=n/10;
-                count++;
         }
-        printf("Number of digits in the given number is:%d\n", count);
+        printf("sum of number of digits in the given number is:%d\n", rem);
 }
