@@ -1,4 +1,4 @@
-//To print float variable binary using diff types of pointers (char pointer)
+//To print double variable binary using diff types of pointers (char pointer)
 #include<stdio.h>
 int main()
 {
@@ -14,3 +14,4 @@ int main()
         }
         }
 }
+
