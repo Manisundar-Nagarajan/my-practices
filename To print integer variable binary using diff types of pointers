@@ -1,14 +1,14 @@
-//To print integer variable binary using diff types of pointers (short int pointer)
+//To print integer variable binary using diff types of pointers (char pointer)
 #include<stdio.h>
 int main()
 {
         int num, i, j;
         printf("Enter the number: ");
         scanf("%d", &num);
-        short int *p=&num;
-        for(j=1;j>=0;j--)
+        char *p=&num;
+        for(j=3;j>=0;j--)
         {
-        for(i=15;i>=0;i--)
+        for(i=7;i>=0;i--)
         {
                 printf("%d", *(p+j)>>i&1);
         }
