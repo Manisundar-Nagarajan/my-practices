@@ -2,11 +2,11 @@
 #include<stdio.h>
 int main()
 {
-        float num;
+        double num;
         printf("Enter the number: ");
-        scanf("%f", &num);
+        scanf("%lf", &num);
         char *p=&num;
-        for(int j=3;j>=0;j--)
+        for(int j=7;j>=0;j--)
         {
         for(int i=7;i>=0;i--)
         {
