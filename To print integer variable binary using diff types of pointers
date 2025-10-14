@@ -1,0 +1,14 @@
+//To print integer variable binary using diff types of pointers (Integer pointer)
+#include<stdio.h>
+int main()
+{
+        int num, i, j;
+        printf("Enter the number: ");
+        scanf("%d", &num);
+        int *p=&num;;
+        for(i=31;i>=0;i--)
+        {
+                printf("%d", (*p>>i)&1);
+        }
+        printf("\n");
+}
